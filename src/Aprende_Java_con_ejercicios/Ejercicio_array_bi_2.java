@@ -16,13 +16,28 @@ public class Ejercicio_array_bi_2 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int [][] tabla=new int [6][5];
+        int [][] tabla=new int [5][6];
+        
+        for(int i=0;i<tabla.length-1;i++){
+            
+            for (int j=0;j<tabla[i].length-1;j++){
+                
+                tabla[i][j]=(int)Math.round(Math.random()*10);
+                
+                tabla[i][tabla[i].length-1]+=tabla[i][j];
+                tabla[tabla.length-1][j]+=tabla[i][j];
+                tabla[tabla.length-1][tabla[i].length-1]+=tabla[i][j];                                          
+               
+            }
+        }
         
         for(int i=0;i<5;i++){
             
-            for (int j=0;j<4;j++){
+            System.out.println();
+            
+            for(int j=0;j<6;j++){
                 
-                tabla[i][j]=
+                System.out.print(tabla[i][j] + " ");
             }
         }
     }
